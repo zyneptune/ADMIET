@@ -1,0 +1,87 @@
+{
+  "treename": "example",
+  "fdim" : 2,
+  "xdim" : 2,
+  "constant_range" : [0.0,10.0],
+  "randseed": 1,
+  "forest" : [
+    {"tree": 0,
+      "nodes" : [
+        {
+          "type" : "CT_MINUS",
+          "node_id" : 0,
+          "children" : [1,2],
+          "weights" : [],
+          "trainable" : false
+        },
+        {
+          "type" : "*",
+          "node_id" : 1,
+          "children" : 3,
+          "weights" : [],
+          "trainable" : true
+        },
+        {
+          "type" : "CT_MUL2",
+          "node_id" : 2,
+          "children" : [3,4],
+          "weights" : [],
+          "trainable" : false
+        },
+        {
+          "type" : "CT_VAR",
+          "node_id" : 3,
+          "children" : [],
+          "weights" : [1.0,0.0],
+          "trainable" : false
+        },
+        {
+          "type" : "*",
+          "node_id" : 4,
+          "children" : 3,
+          "weights" : [],
+          "trainable" : false
+        }
+      ]
+    },
+    {"tree": 10000,
+      "nodes": [
+        {
+          "type" : "CT_MINUS",
+          "node_id" : 10000,
+          "children" : [10001,10002],
+          "weights" : [],
+          "trainable" : false
+        },
+        {
+          "type" : "*",
+          "node_id" : 10001,
+          "children" : 3,
+          "weights" : [],
+          "trainable" : true
+        },
+        {
+          "type" : "CT_MUL2",
+          "node_id" : 10002,
+          "children" : [10003,10004],
+          "weights" : [],
+          "trainable" : false
+        },
+        {
+          "type" : "CT_VAR",
+          "node_id" : 10003,
+          "children" : [],
+          "weights" : [0.0,1.0],
+          "trainable" : false
+        },
+        {
+          "type" : "*",
+          "node_id" : 10004,
+          "children" : 3,
+          "weights" : [],
+          "trainable" : false
+        }
+      ]
+    }
+  ]
+}
